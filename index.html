@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orange Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="My E-commerce Store">
+            <h1>Orange Store</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#cart">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to Our Store</h2>
+        <p>Find the best products here.</p>
+    </section>
+
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="products-grid">
+            <div class="product">
+                <img src="https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg" alt="Stylish Sneakers">
+                <h3>Stylish Sneakers</h3>
+                <p>$50.00</p>
+                <button onclick="addToCart('Stylish Sneakers', 50)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg" alt="Elegant Watch">
+                <h3>Elegant Watch</h3>
+                <p>$150.00</p>
+                <button onclick="addToCart('Elegant Watch', 150)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://images.pexels.com/photos/428340/pexels-photo-428340.jpeg" alt="T-shirts">
+                <h3>T-shirts</h3>
+                <p>$120.00</p>
+                <button onclick="addToCart('T-shirts', 120)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/products/pictures/item/free/original/DOSS23DEN99-19-158-26/j3K7MMy_m-1.jpg" alt="Jeans">
+                <h3>Jeans</h3>
+                <p>$100.00</p>
+                <button onclick="addToCart('Jeans', 100)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/81HEC-PJkiL.AC_UY1100.jpg" alt="Backpack">
+                <h3>Backpack</h3>
+                <p>$200.00</p>
+                <button onclick="addToCart('Backpack', 200)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQenhNV8DvCtjgA4aq2TYmlV9KO2Lroyn8aDQ&s" alt="Stylish Sunglasses">
+                <h3>Stylish Sunglasses</h3>
+                <p>$40.00</p>
+                <button onclick="addToCart('Stylish Sunglasses', 40)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://www.sony.co.in/image/38ea5815d12ab90a45b9b1a35520b794?fmt=jpg-alpha&wid=660&hei=660" alt="Comfortable Headphones">
+                <h3>Comfortable Headphones</h3>
+                <p>$70.00</p>
+                <button onclick="addToCart('Comfortable Headphones', 70)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://images.meesho.com/images/products/200903375/w10o0_512.webp" alt="Dress">
+                <h3>Dress</h3>
+                <p>$100.00</p>
+                <button onclick="addToCart('Dress', 60)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://www.realmenrealstyle.com/wp-content/uploads/2023/06/The-Leather-Jacket-Must-Fit-Correctly.jpg " alt="Leather Jacket">
+                <h3>Leather Jacket</h3>
+                <p>$180.00</p>
+                <button onclick="addToCart('Leather Jacket', 180)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://blackberrys.com/cdn/shop/files/printed-formal-shirt-in-blue-jedi-blackberrys-clothing-1.jpg?v=1685949827" alt="Formal Shirt">
+                <h3>Formal Shirt</h3>
+                <p>$50.00</p>
+                <button onclick="addToCart('Formal Shirt', 120)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://i0.wp.com/www.horex.in/wp-content/uploads/2023/04/1-scaled-e1680640367739.jpg?fit=1920%2C2560&ssl=1" alt="Formal Shoes">
+                <h3>Formal Shoes</h3>
+                <p>$120.00</p>
+                <button onclick="addToCart('Formal Shoes', 120)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="total-price">0.00</span></p>
+        <button onclick="checkout()">Checkout</button>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are an online store providing the best products at the best prices.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Orange Store. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
